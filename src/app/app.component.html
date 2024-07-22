@@ -1,0 +1,17 @@
+<div class="d-flex justify-content-between">
+    <h1>{{'COMMON_TITLE' | translate | async }}</h1>
+    <div>
+        <i *ngIf="currentTheme === darkTheme; else darkIcon" (click)="doToggleTheme()" class="theme-icon bi bi-brightness-high"></i>
+        <ng-template #darkIcon>
+            <i (click)="doToggleTheme()" class="theme-icon bi bi-moon"></i>
+        </ng-template>
+    </div>
+</div>
+<div class="main-content-frame">
+    <div class="d-flex">
+        <app-comments-template-driven-form class="m-1 slab-flex-1"></app-comments-template-driven-form>
+        <app-comments-reactive-form class="m-1 slab-flex-1"></app-comments-reactive-form>
+    </div>
+</div>
+
+

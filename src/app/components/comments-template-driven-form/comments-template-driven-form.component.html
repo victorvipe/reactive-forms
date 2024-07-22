@@ -1,0 +1,34 @@
+<div class="slab-dialog">
+    <systelab-dialog-header class="systelab-dialog-header" [withDrag]="false" [withClose]="false">
+        {{ 'COMMON_TEMPLATE_DRIVEN_FORMS' | translate | async }}
+    </systelab-dialog-header>
+    <div class="p-2 slab-dialog-content">
+        <ng-container>
+          <div class="d-flex flex-column align-items-start justify-content-start">
+            <div class="container-fluid">
+              <form>
+                <div class="row mt-1">
+                  <label class="col-md-3 col-form-label" for="full-width-input">{{'COMMON_EMAIL_VALIDATION' | translate | async }}</label>
+                  <div class="col-md-9">
+                    <input [(ngModel)]="info.email" name='email' systelab-emailValidator
+                           #emailInput="ngModel" class="form-control" placeholder="Email" id="full-width-input">
+                    <div class="mt-1 form-control-error" *ngIf="emailInput.errors?.['email']">
+                      {{'COMMON_EMAIL_ERROR' | translate | async }}
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="container-fluid">
+              <div>
+                <label>{{'COMMON_EXTERNAL_COMMENTS_SHORT' | translate | async }}</label>
+              </div>
+              <textarea maxlength="512" id="commonCommentsTxtArea"
+                        class="slab-textarea slab-flex-1 slab-textarea-no-resize comments-dialog-content-textarea">
+            </textarea>
+            </div>
+          </div>
+
+        </ng-container>
+    </div>
+</div>

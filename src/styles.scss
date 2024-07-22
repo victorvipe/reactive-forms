@@ -1,0 +1,24 @@
+@import "systelab-components/sass/systelab-components";
+@import "systelab-components/sass/modern/systelab-components";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+
+
+body {
+    background-color: var(--ag-header-background-color) !important;
+    margin: 1em !important;
+}
+
+.slab-dialog {
+    .slab-dialog-header {
+        color: var(--primaryColor);
+    }
+}
+
+.form-control-error {
+  color: var(--danger);
+}
+
+
+
+
